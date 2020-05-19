@@ -8,8 +8,8 @@ class Loading extends React.Component {
         return (
             <div className="e-loading">
                 <IconLoader
-                    size={60}
-                    color={"#79fbe1"}
+                    size={70}
+                    color={"#000"}
                 />
             </div>
         )

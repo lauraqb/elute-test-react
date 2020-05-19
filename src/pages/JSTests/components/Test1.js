@@ -26,16 +26,14 @@ function Test1() {
         <Row className="e-test">
             <Col>
                 <Form onSubmit={handleSubmit}>
+                    <Form.Label>1. Create an input that accepts a a sequence of numbers and returns the input reversed  (eg. Input 1, 2, 3 would return 3, 2, 1).</Form.Label>
                     <Form.Group >
-                        <Form.Label>1. Create an input that accepts a a sequence of numbers and returns the input reversed  (eg. Input 1, 2, 3 would return 3, 2, 1).</Form.Label>
-                        <Form.Control type="text" placeholder="Enter secuence" value={input} onChange={handleChange} />
-                        {error && <div className="e-input-error">{error}</div>}
+                        <Form.Control type="text" placeholder='ej. 1, 2, 7, 8' value={input} onChange={handleChange} aria-label="input-test1" />
+                        <Button variant="primary" type="submit" aria-label="button-test1"> Convert </Button>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Convert
-                    </Button>
+                    {error && <div className="e-input-error">{error}</div>}
                 </Form>
-                {output && <div className="e-output">Output: {output}</div>}
+                {output && <div className="e-output"><strong>Output: </strong>{output}</div>}
             </Col>
         </Row>
     )

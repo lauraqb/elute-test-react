@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 
-function Test1() {
+function Test4() {
     const [output, setOutput] = useState("")
     let reader
 
@@ -40,4 +40,4 @@ function Test1() {
     )
 }
 
-export default Test1;
+export default Test4

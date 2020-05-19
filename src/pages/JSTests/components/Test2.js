@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-function Test1() {
+function Test2() {
     const [error, setError] = useState(false)
     const [input, setInput] = useState("")
     const [output, setOutput] = useState("")
@@ -24,20 +24,18 @@ function Test1() {
         <Row className="e-test">
             <Col>
                 <Form onSubmit={handleSubmit}>
+                    <Form.Label>2. Create an input that takes multiple strings and return them in uppercase.</Form.Label>
                     <Form.Group>
-                        <Form.Label>2. Create an input that takes multiple strings and return them in uppercase.</Form.Label>
-                        <Form.Control type="text" placeholder="Enter secuence" value={input} onChange={handleChange} />
-                        {error && <div className="e-input-error">{error}</div>}
+                        <Form.Control type="text" placeholder='ej. foo bar' value={input} onChange={handleChange} />
+                        <Button variant="primary" type="submit"> Convert </Button>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Convert
-                    </Button>
+                    {error && <div className="e-input-error">{error}</div>}
                 </Form>
-                {output && <div className="e-output">Output: {output}</div>}
+                {output && <div className="e-output"><strong>Output: </strong> {output}</div>}
             </Col>
         </Row>
 
     )
 }
 
-export default Test1;
+export default Test2

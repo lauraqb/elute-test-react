@@ -27,16 +27,14 @@ function Test1() {
         <Row className="e-test">
             <Col>
                 <Form onSubmit={handleSubmit}>
+                    <Form.Label>3. Given an input sentence, return the number of unique words (eg. "the cat jumped over the mat" => the->2, cat->1).</Form.Label>
                     <Form.Group>
-                        <Form.Label>3. Given an input sentence, return the number of unique words (eg. "the cat jumped over the mat" => the->2, cat->1).</Form.Label>
-                        <Form.Control type="text" placeholder="Enter secuence" value={input} onChange={handleChange} />
-                        {error && <div className="e-input-error">{error}</div>}
+                        <Form.Control type="text" placeholder="Enter sentence" value={input} onChange={handleChange} />
+                        <Button variant="primary" type="submit"> Convert </Button>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Convert
-                    </Button>
+                    {error && <div className="e-input-error">{error}</div>}
                 </Form>
-                {output  &&  <div className="e-output">Output: </div>}
+                {output  &&  <div className="e-output"><strong>Output: </strong> </div>}
                 {
                     Object.keys(output).map(function(key) {
                         return <li key={key}>{key} -> {output[key]}</li>

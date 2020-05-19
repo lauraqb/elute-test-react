@@ -13,8 +13,8 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/" component={JSTests}></Route>
-        <Route path="/api-tests" component={APITests}></Route>
-        <Route path="/puzzle" component={Puzzle}></Route>
+        <Route exact path="/api-tests" component={APITests}></Route>
+        <Route exact path="/puzzle" component={Puzzle}></Route>
       </Switch>
     </Router>
   )

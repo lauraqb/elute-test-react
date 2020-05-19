@@ -18,7 +18,8 @@ function APITest1() {
     }
     
     const handleClick = () => {
-        let interval = setInterval(fetchUrl, 5000)
+        fetchUrl()
+        setInterval(fetchUrl, 5000)
     }
 
     const displayConcurrency = (country) => {
@@ -38,12 +39,12 @@ function APITest1() {
     }
 
     return (
-        <Row className="e-test">
+        <Row>
             
             {loading && <Loading/>}
             <Col>
-                <div>1. Fetch data from https://blockchain.info/ticker, and present the data from 2 of the currencies.</div>
-                <div>2. Refresh the data every 5 seconds</div>
+                <div className="e-description">1. Fetch data from https://blockchain.info/ticker, and present the data from 2 of the currencies.</div>
+                <div className="e-description">2. Refresh the data every 5 seconds</div>
                 <Button variant="primary" onClick={handleClick}>
                     Fecth data
                 </Button>
